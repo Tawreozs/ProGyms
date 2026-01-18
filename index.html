@@ -10,7 +10,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
     
-    <!-- Babel для работы .tsx напрямую в браузере (локально и GH Pages) -->
+    <!-- Babel для работы .tsx напрямую в браузере -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
     <style>
@@ -45,12 +45,12 @@
 <body>
     <div id="root"></div>
     
-    <!-- Используем data-type="module" и type="text/babel" чтобы Babel обработал файл -->
+    <!-- ВАЖНО: Только один скрипт с типом text/babel. Babel сам загрузит index.tsx -->
     <script 
       type="text/babel" 
       data-type="module" 
       data-presets="react,typescript" 
-      src="./index.tsx">
+      src="index.tsx">
     </script>
 <script type="module" src="/index.tsx"></script>
 </body>
