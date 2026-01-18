@@ -1,0 +1,5 @@
+{
+  "name": "ProGym Constructor",
+  "description": "A high-performance workout builder that allows users to assemble sessions from modular blocks like Warm-up, Core, and Cool-down, including specialized cardio tracking with incline, speed, and time.",
+  "requestFramePermissions": []
+}
