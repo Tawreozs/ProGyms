@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>ProGym Constructor</title>
     
-    <!-- Стили -->
+    <!-- Стили через CDN Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
     
-    <!-- Babel для работы .tsx напрямую в браузере -->
+    <!-- Babel для компиляции TSX в браузере -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
     <style>
@@ -19,6 +19,7 @@
             background-color: #050506;
             color: #ffffff;
             -webkit-tap-highlight-color: transparent;
+            margin: 0;
         }
         .custom-scrollbar::-webkit-scrollbar {
             width: 4px;
@@ -32,9 +33,9 @@
     <script type="importmap">
 {
   "imports": {
-    "react": "https://esm.sh/react@19.0.0",
-    "react-dom": "https://esm.sh/react-dom@19.0.0",
-    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
+    "react": "https://esm.sh/react@19.0.0?dev",
+    "react-dom": "https://esm.sh/react-dom@19.0.0?dev",
+    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client?dev",
     "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
     "react/": "https://esm.sh/react@^19.2.3/"
   }
@@ -45,7 +46,7 @@
 <body>
     <div id="root"></div>
     
-    <!-- ВАЖНО: Только один скрипт с типом text/babel. Babel сам загрузит index.tsx -->
+    <!-- Babel обработает этот файл. Убедитесь, что index.tsx лежит в той же папке -->
     <script 
       type="text/babel" 
       data-type="module" 
